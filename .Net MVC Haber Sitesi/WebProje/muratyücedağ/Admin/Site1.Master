@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="muratyücedağ.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <table>
+                      <tr>
+                        <th>Haber Yönetim Paneli</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <asp:Menu ID="Menu1" runat="server">
+                              <Items>
+                                  <asp:MenuItem NavigateUrl="~/Admin/Site1.Master" Text="Anasayfa" Value="Anasayfa"></asp:MenuItem>
+                                  <asp:MenuItem Text="Kategoriler" Value="New Item" NavigateUrl="~/Admin/kategoriler.Master"></asp:MenuItem>
+                                  <asp:MenuItem NavigateUrl="~/Admin/haberler.Master" Text="Haberler" Value="Haberler"></asp:MenuItem>
+                              </Items>
+                          </asp:Menu>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                      </tr>
+                  </table>
+        </div>
+    </form>
+</body>
+</html>
